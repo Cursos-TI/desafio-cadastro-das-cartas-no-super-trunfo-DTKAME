@@ -6,16 +6,15 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
 
-int main() {
+int main(){
 
-    
-     //CARTA 1
+    //CARTA 1
     char cidade[50];
     char estado;
     char codigo[50];
     int populacao, pontoturistico;
     float area, pib;
-
+    float densidade, pibc1;
     //CARTA 2
 
     char cidade2[50];
@@ -23,7 +22,7 @@ int main() {
     char codigo2[50];
     int populacao2, pontoturistico2;
     float area2, pib2;
-
+    float densidade2, pibc2;
 
 
 
@@ -59,12 +58,21 @@ int main() {
      scanf("%i", &pontoturistico);
 
      //printar a carta 1
-     printf("\nCarta 1\n");
+     printf("Carta 1\n");
      printf("Estado: %c\n", estado);
      printf("Código: %s\n", codigo);
      printf("Nome da Cidade: %s\n", cidade);
-     printf("População: %i, Área: %.2f\n", populacao, area);
-     printf("PIB: %.2f, Número de pontos Turísticos: %i\n", pib, pontoturistico);
+     printf("População: %i\n", populacao);
+     printf("Área: %.2f Km\n", area);
+     printf("PIB: %.2f\n", pib);
+     printf("Número de pontos Turísticos: %i\n", pontoturistico);
+
+     densidade = (float)populacao / area;
+     printf("Densidade Populacional %.2f\n", densidade);
+
+     pibc1 = (float)pib / populacao;
+     printf("PIB per capita %.2f\n", pibc1);
+
      
 
 
@@ -103,19 +111,29 @@ int main() {
      printf("Número de Pontos Turísticos: \n");
      scanf("%i", &pontoturistico2);
 
-     //printar a carta 2
-     printf("\nCarta 2\n");
+     printf("Carta 2\n");
      printf("Estado: %c\n", estado2);
      printf("Código: %s\n", codigo2);
      printf("Nome da Cidade: %s\n", cidade2);
-     printf("População: %i, Área: %.2f\n", populacao2, area2);
-     printf("PIB: %.2f, Número de pontos Turísticos: %i\n", pib2, pontoturistico2);
+     printf("População: %i\n", populacao2);
+     printf("Área: %.2f Km\n", area2);
+     printf("PIB: %.2f\n", pib2);
+     printf("Número de pontos Turísticos: %i\n", pontoturistico2);
+
+
+     //densidade
+     densidade2 = (float)populacao2 / area2;
+     printf("Densidade Populacional %.2f\n", densidade2);
+
+     //pib percapita
+     pibc2 = (float)pib2 / populacao2;
+     printf("PIB per capita %.2f\n", pibc2);
 
 
 
 
 
 
-
+        
     return 0;
 }
